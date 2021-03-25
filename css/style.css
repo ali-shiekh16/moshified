@@ -6,6 +6,11 @@
   --color-body: #918ca4;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* Typography */
 
 html {
@@ -179,4 +184,58 @@ a {
   height: 64px;
   justify-content: center;
   width: 64px;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  outline: none;
+  text-transform: uppercase;
+  padding: 2.5rem 3.5rem;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #00aecc;
+}
+
+.btn--secondary:active {
+  background: #009fbb;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: #dd2d00;
+}
+
+.btn--accent:active {
+  background: #cc2a00;
+}
+.btn--outlined {
+  border: solid 2px var(--color-headings);
+  background: #fff;
+}
+
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
