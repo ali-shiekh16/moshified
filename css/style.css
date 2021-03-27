@@ -99,9 +99,10 @@ a {
 
 .badge {
   border-radius: 20px;
-  font-size: 2rem;
+  display: inline-block;
+  font-size: 1.6rem;
   font-weight: 600;
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 1rem;
 }
 
 .badge--primary {
@@ -115,8 +116,8 @@ a {
 }
 
 .badge--dark {
+  background: rgba(0, 0, 0, 0.2);
   color: #fff;
-  background: rgba(0, 0, 0, 0.25);
 }
 
 .badge--small {
@@ -125,7 +126,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .badge {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -163,7 +164,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .list--tick {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -198,7 +199,7 @@ a {
   margin: 1rem 0;
   outline: none;
   text-transform: uppercase;
-  padding: 2.5rem 3.5rem;
+  padding: 2rem 3.5rem;
 }
 
 .btn--secondary {
@@ -229,8 +230,14 @@ a {
 .btn--outlined {
   border: solid 2px var(--color-headings);
   background: #fff;
+  color: var(--color-headings);
+  transition: background 0.2s, color 0.2s;
 }
 
+.btn--outlined:hover {
+  background: var(--color-headings);
+  color: #fff;
+}
 .btn--block {
   display: inline-block;
   width: 100%;
@@ -277,5 +284,101 @@ a {
 @media screen and (min-width: 1024px) {
   .input-search {
     font-size: 1.5rem;
+  }
+}
+
+/* Cards */
+
+.card {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  max-width: 50rem;
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background-blend-mode: darken;
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.card__header {
+  border-radius: 8px 8px 0 0;
+  margin: -1.5rem -3rem;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.card__header * {
+  color: inherit;
+}
+
+.card__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.card__price {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.card__billing-cycle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+
+.card__tagline {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.card .badge {
+  margin: 0 0.5rem;
+  transform: translateY(-0.2rem);
+}
+
+.card .list {
+  padding-top: 3rem;
+}
+
+.card--popular .card__header::before {
+  content: url('/images/icons/popular.svg');
+  position: absolute;
+  width: 5rem;
+  top: -0.5rem;
+  right: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 35rem;
+  }
+
+  .card__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .card__tagline {
+    font-size: 1.7rem;
+  }
+
+  .card__header {
+    padding: 1px 3rem;
+  }
+
+  .card--popular .card__header::before {
+    width: 4rem;
   }
 }
