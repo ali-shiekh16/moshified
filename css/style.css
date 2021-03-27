@@ -337,10 +337,10 @@ a {
 }
 
 .card__tagline {
-  display: block;
   color: rgba(255, 255, 255, 0.9);
-  font-weight: 300;
+  display: block;
   font-size: 2rem;
+  font-weight: 300;
   padding: 0;
 }
 
@@ -356,9 +356,9 @@ a {
 .card--popular .card__header::before {
   content: url('/images/icons/popular.svg');
   position: absolute;
-  width: 5rem;
-  top: -0.5rem;
   right: 2rem;
+  top: -0.5rem;
+  width: 5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -381,4 +381,23 @@ a {
   .card--popular .card__header::before {
     width: 4rem;
   }
+}
+
+/* Media  */
+
+.media {
+  display: flex;
+}
+
+.media__img {
+  align-self: flex-start;
+  margin: 1rem 0 0 0;
+}
+
+.media__body {
+  margin-left: 2rem;
+}
+
+.media__title {
+  margin: 0;
 }
