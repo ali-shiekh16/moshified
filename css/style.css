@@ -180,6 +180,15 @@ a {
   fill: var(--color-primary);
 }
 
+.icon--white {
+  fill: #fff;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon-container {
   align-items: center;
   background: #f3f9fa;
@@ -188,6 +197,11 @@ a {
   height: 64px;
   justify-content: center;
   width: 64px;
+  padding: 15px;
+}
+
+.icon-container--primary {
+  background: var(--color-accent);
 }
 
 /* Buttons */
@@ -255,7 +269,6 @@ a {
 .input {
   border-radius: var(--border-radius);
   border: solid 1px var(--color-border);
-  /* box-shadow: 0 0 30px 8px #ccc; */
   color: var(--color-headings);
   font-size: 2rem;
   outline: none;
@@ -292,7 +305,6 @@ a {
 
 .card {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  max-width: 50rem;
   padding: 1.5rem 3rem;
   border-radius: 8px;
 }
@@ -303,7 +315,6 @@ a {
 }
 
 .card--secondary .card__header {
-  background-blend-mode: darken;
   background: var(--color-secondary);
   color: #fff;
 }
@@ -364,7 +375,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .card {
-    max-width: 35rem;
+    /* max-width: 35rem; */
   }
 
   .card__billing-cycle {
@@ -435,7 +446,7 @@ a {
   position: relative;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .quote__text,
   .quote__author {
     font-size: 2.4rem;
@@ -462,4 +473,26 @@ a {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Testimonial  */
+
+.testimonial {
+  padding: 4rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  right: -32px;
+  top: 3rem;
 }
