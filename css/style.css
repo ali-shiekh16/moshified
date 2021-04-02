@@ -6,6 +6,7 @@
   --color-headings-dark: #5c5577;
   --color-body: #918ca4;
   --color-border: #ccc;
+  --color-shadow-dark: #2e2e2e;
   --border-radius: 30px;
 }
 
@@ -13,6 +14,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 /* Typography */
 
@@ -380,10 +386,6 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .card {
-    /* max-width: 35rem; */
-  }
-
   .card__billing-cycle {
     font-size: 1.6rem;
   }
@@ -561,6 +563,7 @@ a {
 }
 
 .collapsible__icon {
+  cursor: pointer;
   transform: rotate(-90deg);
   transition: transform 0.3s;
 }
@@ -578,4 +581,80 @@ a {
 
 .collapsible--expanded .collapsible__icon {
   transform: rotate(0);
+}
+
+/* Navigation bar */
+
+.navbar {
+  align-items: center;
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.navbar__brand {
+  transform: translateY(5px);
+  width: 150px;
+}
+
+.navbar__toggler {
+  transform: none;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.navbar.collapsible--expanded .navbar__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 5px var(--color-shadow-dark);
+  border-radius: 5px;
+}
+
+.navbar__brand > img {
+  width: 100%;
+}
+
+.navbar__list {
+  margin: 0;
+  width: 100%;
+}
+
+.navbar__item {
+  border-bottom: 1px solid var(--color-shadow-dark);
+}
+
+.navbar__item:last-child {
+  border-bottom: 0;
+}
+
+.navbar__item {
+  padding: 0.5rem 2rem;
+}
+
+.navbar__link {
+  color: #d2d0db;
+  transition: 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__list {
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+    width: auto;
+  }
+
+  .navbar__toggler {
+    display: none;
+  }
+
+  .navbar__item {
+    border: 0;
+  }
 }
