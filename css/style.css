@@ -49,7 +49,7 @@ h3 {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -688,17 +688,46 @@ a {
   margin-top: 0;
 }
 
+.block--skewed-left,
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+
 .block--skewed-right {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 .block--skewed-left {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 .container {
   margin: 0 auto;
   max-width: 1140px;
+}
+
+/* Hero Section */
+
+.hero__img {
+  height: 100%;
+  width: 100%;
+}
+
+.hero__text {
+  margin: 2rem 0 3rem;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  color: #b9c3cf;
+}
+
+.hero.block--skewed-right {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    align-self: center;
+    justify-self: right;
+    text-align: left;
+  }
 }
