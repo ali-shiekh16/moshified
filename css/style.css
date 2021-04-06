@@ -7,7 +7,7 @@
   --color-body: #918ca4;
   --color-border: #ccc;
   --color-shadow-dark: #2e2e2e;
-  --border-radius: 30px;
+  --border-radius: 40px;
 }
 
 *,
@@ -107,7 +107,6 @@ a {
 .badge {
   border-radius: 20px;
   display: inline-block;
-  font-size: 1.6rem;
   font-weight: 600;
   padding: 0.2rem 1rem;
 }
@@ -132,7 +131,7 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .badge {
+  .badge--small {
     font-size: 1.2rem;
   }
 }
@@ -218,9 +217,13 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
-  outline: none;
+  outline: 0;
   text-transform: uppercase;
   padding: 2rem 3.5rem;
+}
+
+.btn:focus {
+  outline: 0;
 }
 
 .btn--secondary {
@@ -300,11 +303,11 @@ a {
 .input-container .input {
   border: 0;
   flex-grow: 1;
-  padding: 3rem 1.5rem;
+  padding: 2rem 3rem;
 }
 
 .input-container .btn {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -729,5 +732,34 @@ a {
     align-self: center;
     justify-self: right;
     text-align: left;
+  }
+}
+
+/* Feature Section */
+.block-domain__text {
+  width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-domain .input-container {
+  border: 0;
+  box-shadow: 0 10px 30px 0px #ddd;
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-domain__list {
+  align-items: center;
+  display: grid;
+  font-weight: 700;
+  grid-template: repeat(2, 5rem) / repeat(3, 1fr);
+  justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__list {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
   }
 }
