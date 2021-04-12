@@ -364,7 +364,7 @@ a {
 }
 
 .plan:hover .card {
-  box-shadow: 0 30px 25px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 25px 10px #dce3e7;
   transform: scale(1.05);
 }
 
@@ -403,6 +403,18 @@ a {
   margin: 3rem 0;
 }
 
+.plan--popular {
+  transform: scale(1.12);
+}
+
+.plan--popular .card {
+  box-shadow: 0 05px 35px 10px #dce3e7;
+}
+
+.plan--popular:hover {
+  transform: scale(1.14);
+}
+
 .plan--popular .card__header::before {
   content: url('/images/icons/popular.svg');
   position: absolute;
@@ -429,6 +441,12 @@ a {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .plan {
+    min-width: 40rem;
+    margin: 0 auto;
+  }
+}
 /* Media  */
 
 .media {
@@ -788,3 +806,7 @@ a {
 }
 
 /* Plan Block  */
+
+.block-plan .grid {
+  gap: 8rem 4.5rem;
+}
