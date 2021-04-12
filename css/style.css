@@ -810,3 +810,29 @@ a {
 .block-plan .grid {
   gap: 8rem 4.5rem;
 }
+
+/* Feature Block*/
+
+.feature {
+  align-items: center;
+  gap: 5rem;
+  justify-items: center;
+}
+
+.feature:not(:last-child) {
+  margin-bottom: 10rem;
+}
+
+.feature__img {
+  width: 100%;
+}
+
+.feature__heading {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-child(odd) .feature__content {
+    order: 2;
+  }
+}
