@@ -316,9 +316,9 @@ a {
   margin: 5px;
 }
 
-.icon {
+.input-container .icon {
   height: 20px;
-  margin-right: 4px;
+  margin-right: 3px;
   vertical-align: middle;
   width: 20px;
 }
@@ -371,11 +371,6 @@ a {
   transition: all 0.2s;
 }
 
-.plan:hover .card {
-  box-shadow: 0 30px 25px 10px #dce3e7;
-  transform: scale(1.05);
-}
-
 .plan__title {
   font-size: 2.4rem;
   font-weight: 600;
@@ -411,16 +406,8 @@ a {
   margin: 3rem 0;
 }
 
-.plan--popular {
-  transform: scale(1.12);
-}
-
 .plan--popular .card {
   box-shadow: 0 05px 35px 10px #dce3e7;
-}
-
-.plan--popular:hover {
-  transform: scale(1.14);
 }
 
 .plan--popular .card__header::before {
@@ -444,12 +431,21 @@ a {
     padding: 1px 3rem;
   }
 
+  .plan--popular {
+    transform: scale(1.15);
+  }
+
   .plan--popular .card__header::before {
     width: 4rem;
   }
+
+  .plan:hover .card {
+    box-shadow: 0 30px 25px 10px #dce3e7;
+    transform: scale(1.05);
+  }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1023px) and (min-width: 350px) {
   .plan {
     min-width: 40rem;
     margin: 0 auto;

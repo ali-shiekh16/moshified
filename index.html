@@ -13,5 +13,154 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Moshified</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="collapsible navbar">
+        <a href="/" class="navbar__brand">
+          <img src="/images/logo.svg" alt="Moshified Logo" />
+        </a>
+        <svg
+          class="icon icon--primary navbar__toggler collapsible__icon icon--white"
+        >
+          <use xlink:href="images/icons/sprite.svg#menu"></use>
+        </svg>
+        <ul class="navbar__list collapsible__content">
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Hosting</a>
+          </li>
+          <li class="navbar__item"><a href="#" class="navbar__link">VPS</a></li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Domain</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Pricing</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="block block--dark block--skewed-right hero">
+        <div class="container grid grid--1x2">
+          <header class="block__header hero__content">
+            <h1 class="block__heading">Cloud Hosting for Pros</h1>
+            <p class="hero__text">
+              Deploy your website in less than 60 seconds.
+            </p>
+            <button class="btn btn--accent btn--stretched">Get Started</button>
+          </header>
+          <picture>
+            <source
+              srcset="images/banner.webp 1x, images/banner@2x.webp 2x"
+              type="image/png"
+            />
+            <source
+              srcset="images/banner.png 1x, images/banner@2x.png 2x"
+              type="image/png"
+            />
+            <img class="hero__img" src="/images/banner.png" alt="" />
+          </picture>
+        </div>
+      </section>
+      <section class="block container block-domain">
+        <header class="block__header">
+          <h2 class="block__heading">Starting $10 at per month.</h2>
+          <p class="block-domain__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eum
+            voluptas eius tempore commodi autem nihil consequatur unde
+            praesentium aspernatur!
+          </p>
+        </header>
+        <div class="input-container">
+          <input
+            type="text"
+            class="input"
+            placeholder="Enter domain name here..."
+          />
+          <button class="btn btn--accent">
+            <svg class="icon icon--primary icon--small">
+              <use xlink:href="images/icons/sprite.svg#search"></use>
+            </svg>
+            Search
+          </button>
+        </div>
+        <ul class="block-domain__list">
+          <li>.com $9.26</li>
+          <li class="badge badge--secondary">.sg $7.91</li>
+          <li>.info $14.15</li>
+          <li>.net $16.15</li>
+          <li>.io $11.63</li>
+          <li>.xyz $10.15</li>
+        </ul>
+      </section>
+
+      <section class="container block block-plan">
+        <div class="grid grid--1x3">
+          <div class="plan">
+            <div class="card card--secondary">
+              <header class="card__header">
+                <h2 class="plan__title">Entry</h2>
+                <h3 class="plan__price">
+                  $15<span class="plan__billing-cycle">/month</span>
+                </h3>
+                <div class="badge badge--dark badge--small">10% off</div>
+                <p class="plan__tagline">optimal cloud experience</p>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Storage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outlined btn--block">buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="plan plan--popular">
+            <div class="card card--primary">
+              <header class="card__header">
+                <h2 class="plan__title">Buisnesss</h2>
+                <h3 class="plan__price">
+                  $25<span class="plan__billing-cycle">/month</span>
+                </h3>
+                <div class="badge badge--dark badge--small">20% off</div>
+                <p class="plan__tagline">optimal cloud experience</p>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Storage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outlined btn--block">buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="plan">
+            <div class="card card--secondary">
+              <header class="card__header">
+                <h2 class="plan__title">Buisnesss Plus</h2>
+                <h3 class="plan__price">
+                  $54<span class="plan__billing-cycle">/month</span>
+                </h3>
+                <div class="badge badge--dark badge--small">10% off</div>
+                <p class="plan__tagline">optimal cloud experience</p>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <li class="list__item">Unlimited Websites</li>
+                  <li class="list__item">Unlimited Bandwidth</li>
+                  <li class="list__item">100 GB SSD Storage</li>
+                  <li class="list__item">3 GB RAM</li>
+                </ul>
+                <button class="btn btn--outlined btn--block">buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
