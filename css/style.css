@@ -45,6 +45,7 @@ h2,
 h3 {
   color: var(--color-headings);
   font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 
@@ -224,8 +225,9 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  text-transform: uppercase;
   padding: 2rem 4vw;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .btn:focus {
@@ -445,7 +447,7 @@ a {
   }
 }
 
-@media screen and (max-width: 1023px) and (min-width: 350px) {
+@media screen and (min-width: 430px) and (max-width: 1023px) {
   .plan {
     min-width: 40rem;
     margin: 0 auto;
@@ -534,11 +536,12 @@ a {
 /* Testimonial  */
 
 .testimonial {
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 .testimonial__image {
   position: relative;
+  margin: 0 4rem;
 }
 
 .testimonial__image > img {
@@ -556,6 +559,7 @@ a {
 /* Callout */
 
 .callout {
+  border-radius: 5px;
   padding: 4rem;
 }
 
@@ -726,7 +730,7 @@ a {
 }
 
 .block__header {
-  padding: 2rem 4rem;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -813,7 +817,7 @@ a {
   gap: 2.5rem 2rem;
   grid-template: repeat(2, 5rem) / repeat(2, 1fr);
   justify-items: center;
-  margin: 4rem auto;
+  margin: 4rem auto 0;
   max-width: 700px;
 }
 
@@ -825,8 +829,12 @@ a {
 
 /* Plan Block  */
 
+.block-plan {
+  padding-bottom: 8rem;
+}
+
 .block-plan .grid {
-  gap: 8rem 4.5rem;
+  gap: 8rem 5rem;
 }
 
 /* Feature Block*/
@@ -875,8 +883,12 @@ a {
 }
 
 /* footer */
+.callout-signup {
+  transform: translateY(10rem);
+}
 
 .footer {
+  padding-top: 20rem;
   background: #232323;
 }
 
